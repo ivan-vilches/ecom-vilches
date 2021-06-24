@@ -10,10 +10,9 @@ function App() {
     <div className="App">
      <Navi/>
      <ItemListContainer grettings="Saludos con un props greetings" />
-     <ItemCount initial={1} stock={5} onAdd={() => console.log('agregado')}/>
    
     </div>
-  );
+  )
 }
 
 export default App;
