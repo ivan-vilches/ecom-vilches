@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Item from './Item.js';
-import Loading from './Loading.js'; 
+import Loading from '../Loading.js'
 
 const catalog = [
-{id:'1', name: 'Aceite de Oliva', brand: 'chef', price: 50, initial: 2},
-{id:'2', name: 'Incienso', brand: 'Lunag chanpak', price: 100, initial: 1},
-{id:'3', name: 'Piedra de Cuarzo', brand: 'sin marca', price: 20, initial: 4}
+{id:'1', name: 'Oliva Extra Virgen', brand: 'indu', price: 50, initial: 2, min: 2, max: 10},
+{id:'2', name: 'Incienso', brand: 'neg champa', price: 100, initial: 1, min: 1, max: 10},
+{id:'3', name: 'Cristal de Cuarzo', brand: 'Himalaya', price: 20, initial: 4, min: 4, max: 8}
 ];
 
 const ItemList = function(){

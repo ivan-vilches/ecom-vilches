@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemCount from './ItemCount.js';
+import ProductImage from '../../assets/oliva.jpg';
 
 const style = {
 	card: {
@@ -17,17 +18,17 @@ const style = {
 	},
 }
 
-const Item = function({id, name, brand, price, initial}){
+const Item = function({id, name, brand, price, initial, min, max}){
 	const addToCart = function(quantity){console.log('Se agregaron '+ quantity + ' unidades al carrito')}
 	return(
 		<div className="card" style={style.card}>
 			<h3>{name}</h3>
 			<h5>{brand}</h5>
 			<p>${price}</p>
-  			<img style={style.image} className="card-img-top img-thumbnail" />
-              <ItemCount initial={1} stock={5} onAdd={() => console.log('agregado')}/>
+  			<img style={style.image} className="card-img-top img-thumbnail" src={ProductImage} alt="product-image"/>
+			<ItemCount max={max} min={min} initial={initial} onAdd={addToCart}/>
 		</div>
-		)
-};
+		);
+}
 
 export default Item;

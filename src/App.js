@@ -1,21 +1,22 @@
-// import logo from './logo.svg'; 
-import Navi from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
-
+import React from 'react';
 import './App.css';
+import Navbar from './components/navbar/Navbar.js';
+import Home from './components/home/Home.js';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-function App() {
+function App() {  
   return (
-    <div className="App">
-     <Navi/>
-     <ItemListContainer grettings="Saludos con un props greetings" />
-   
-    </div>
-  )
+   <BrowserRouter>
+    	<div className="App">
+		    <Navbar />
+    		<Switch>
+    			<Route exact path='/'>
+		      		<Home />
+		      	</Route>
+    		</Switch>
+    	</div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
-
-
-// 
